@@ -5,9 +5,11 @@ import "bootswatch/dist/simplex/bootstrap.min.css";
 function Scores() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
+  const pvm = new Date();
+  pvm.setDate(pvm.getDate() - 1); // 👈 Move one day back
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/score/now') // Replace with your actual API
+    fetch('v1/score/'+pvm.getFullYear()+'-'+String(pvm.getMonth()+1).padStart(2, '0')+'-'+String(pvm.getDate()).padStart(2, '0')) // Replace with your actual API
       .then(res => res.json())
       .then(data => {
         const yesterday = new Date();

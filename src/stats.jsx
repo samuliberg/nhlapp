@@ -22,7 +22,7 @@ function Stats() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/stats') // Replace with your actual API
+    fetch('v1/skater-stats-leaders/20252026/2')
       .then(res => res.json())
       .then(data => {
         setStats(data);
