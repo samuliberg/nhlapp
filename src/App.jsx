@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import "bootswatch/dist/simplex/bootstrap.min.css";
 import Schedule from './schedule.jsx';
 import Scores from './score.jsx';
