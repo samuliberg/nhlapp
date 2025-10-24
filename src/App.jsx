@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Navbar expand="lg" bg="success" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/#/">
+          <Navbar.Brand href="/nhlapp/#/">
             <img
               src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg"
               alt="NHL Logo"
@@ -24,10 +24,10 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/#/scores">Scores</Nav.Link>
-              <Nav.Link href="/#/schedule">Schedule</Nav.Link>
-              <Nav.Link href="/#/stats">Stats</Nav.Link>
-              <Nav.Link href="/#/standings">Standings</Nav.Link>
+              <Nav.Link href="/nhlapp/#/scores">Scores</Nav.Link>
+              <Nav.Link href="/nhlapp/#/schedule">Schedule</Nav.Link>
+              <Nav.Link href="/nhlapp/#/stats">Stats</Nav.Link>
+              <Nav.Link href="/nhlapp/#/standings">Standings</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
