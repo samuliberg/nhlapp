@@ -37,7 +37,7 @@ function Scores() {
         </div>;
 
 return (
-  <div className="container-fluid min-vh-100 justify-content-center mt-2">
+  <div className="container-fluid min-vh-100 justify-content-center align-items-center mt-4">
     {/* <div className="container d-flex flex-column align-items-center min-vh-100 mt-5"> */}
     <h2 className="text-center mb-4">Last Night's Scores</h2>
     <Row className="justify-content-center">
@@ -50,7 +50,7 @@ return (
     rel="noopener noreferrer"
     style={{ textDecoration: 'none', color: 'inherit' }}
   >
-    <Card className="shadow-sm w-100 my-1" style={{ maxWidth: '300px', borderRadius: '15px', margin: '30px'}}>
+    <Card className="shadow-sm my-1 w-100" style={{ borderRadius: '15px'}}>
       <Card.Body className="d-flex flex-column align-items-center text-center my-2">
         <div className="d-flex justify-content-around align-items-center w-100 mb-3">
           <div className="d-flex flex-column align-items-center">
