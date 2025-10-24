@@ -5,10 +5,11 @@ const Standings = () => {
   const [eastern, setEastern] = useState([]);
   const [western, setWestern] = useState([]);
   const [loading, setLoading] = useState(true);
+  const API_BASE = import.meta.env.VITE_API_BASE;
   const pvm = new Date();
 
   useEffect(() => {
-    fetch('v1/standings/'+pvm.getFullYear()+'-'+String(pvm.getMonth()+1).padStart(2, '0')+'-'+String(pvm.getDate()).padStart(2, '0'))
+    fetch(`${API_BASE}/standings/${pvm.getFullYear()}-${String(pvm.getMonth() + 1).padStart(2, '0')}-${String(pvm.getDate()).padStart(2, '0')}`)
       .then(response => response.json())
       .then(data => {
         const east = data.standings.filter(team => team.conferenceAbbrev === 'E');

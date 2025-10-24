@@ -8,6 +8,7 @@ function Stats() {
   const [selectedCategory, setSelectedCategory] = useState('goals');
   const [playerSearch, setPlayerSearch] = useState('');
   const [selectedTeam, setSelectedTeam] = useState('all');
+  const API_BASE = import.meta.env.VITE_API_BASE;
 
   const categories = {
     goals: 'Goals',
@@ -22,7 +23,7 @@ function Stats() {
   };
 
   useEffect(() => {
-    fetch('v1/skater-stats-leaders/20252026/2')
+    fetch(`${API_BASE}/skater-stats-leaders/20252026/2`)
       .then(res => res.json())
       .then(data => {
         setStats(data);
