@@ -6,10 +6,11 @@ function Schedule() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const pvm = new Date();
+  const API_BASE = import.meta.env.VITE_API_BASE;
 
 
   useEffect(() => {
-    fetch('/v1/schedule/'+pvm.getFullYear()+'-'+String(pvm.getMonth()+1).padStart(2, '0')+'-'+String(pvm.getDate()).padStart(2, '0'))
+    fetch(`${API_BASE}/v1/schedule/${pvm.getFullYear()}-${String(pvm.getMonth() + 1).padStart(2, '0')}-${String(pvm.getDate()).padStart(2, '0')}`)
     // fetch('http://localhost:3000/api/schedule/now')
       .then(res => res.json())
       .then(data => {
