@@ -6,6 +6,7 @@ import Schedule from './schedule.jsx';
 import Scores from './score.jsx';
 import Stats from './stats.jsx';
 import Standings from './standings.jsx';
+import LiveScores from './livescore.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              <Nav.Link href="/nhlapp/#/live">Live</Nav.Link>
               <Nav.Link href="/nhlapp/#/scores">Scores</Nav.Link>
               <Nav.Link href="/nhlapp/#/schedule">Schedule</Nav.Link>
               <Nav.Link href="/nhlapp/#/stats">Stats</Nav.Link>
@@ -35,7 +37,8 @@ function App() {
 
       <Container className="mt-4">
         <Routes>
-          <Route path="/" element={<Scores />} />
+          <Route path="/" element={<LiveScores />} />
+          <Route path="/live" element={<LiveScores />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/scores" element={<Scores />} />
           <Route path="/stats" element={<Stats />} />
